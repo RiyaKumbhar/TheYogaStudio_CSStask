@@ -1,0 +1,415 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.container-Nav{
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.container-Nav ul{
+    height: 13px;
+    display: flex;
+    list-style: none;
+    /* background-color: tomato; */
+}
+.container-Nav a{
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+.container-Nav a span{
+    color: rgb(143, 237, 143);
+}
+.container-Nav a:hover{
+    color: #fff;
+}
+
+/* ------------------------------------------------------> */
+.container-Nav ul li a{
+    text-decoration: none;
+    padding: 5px;
+    /* background-color: tomato; */
+    color: #fff;
+    position: relative;
+}
+
+.container-Nav ul li a::after{
+    content: '';
+    width: 0px;
+    height: 2px;
+    background-color: teal;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    transition: 0.3s all;
+}
+.container-Nav ul li a:hover{
+    color: teal;
+}
+.container-Nav ul li a:hover::after{
+    width: 100%;
+}
+/* --------------------------------------------------------> */
+
+.container-Nav ul{
+    margin-right: 20px;
+}
+
+
+
+/* home -----> */
+
+.container-home{
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: tomato; */
+    background-image: url('./pexels-elina-fairytale-3822864.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container-home .Tag-Line-cont{
+    text-align: center;
+    padding: 2em;
+    color: rgb(0, 0, 0);
+}
+.container-home .action-button button{
+    font-size: 18px;
+    width: 140px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    margin: 0 20px;
+}
+.container-home .action-button button a{
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    color: #000;
+    background-color: rgb(64, 201, 64);
+    border-radius: 5px;
+}
+.container-home .action-button button a:hover{
+    color: lightgreen;
+    /* background-color: #aaa; */
+}
+
+
+/* About ----> */
+
+.About-cont{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.About-cont > *{
+    flex-basis: 100%;    
+    padding: 3em;
+}
+
+.About-cont .left-cont h3 , .About-cont .left-cont p{
+    margin: 1em 0;
+}
+
+.About-cont .left-cont span{
+    color: rgb(24, 175, 24);
+}
+
+.About-cont .left-cont p{
+    line-height: 30px;
+}
+
+.About-cont .left-cont button{
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    cursor: pointer;
+    border: none;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(67, 241, 67);
+}
+
+.About-cont .right-cont .img-wrapper{
+    display: grid;
+    grid-template-areas:
+               "b b b"
+               "b b b"
+               "b b b"
+               "f s t";
+}
+.About-cont .right-cont .img-wrapper .big-img{
+    grid-area: b;
+    background-image: url('./img1.jpg');
+    background-color: tomato;
+}
+.About-cont .right-cont .img-wrapper .s1-img{
+    grid-area: f;
+}
+.About-cont .right-cont .img-wrapper .s2-img{
+    grid-area: s;
+}
+.About-cont .right-cont .img-wrapper .s3-img{
+    grid-area: t;
+}
+
+.cont-pricing{
+    display: flex;
+    flex-direction: column;
+    /* position: absolute; */
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(49, 80, 105);
+    /* color: #fff; */
+
+}
+
+.our-packages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.pricing-cards-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7em;
+    column-gap: 40px;
+
+    /* justify-content: space-between; */
+    /* color: #fff; */
+    /* background-color: darkgrey; */
+}
+
+.priceCard1{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    border-radius: 5px;
+    overflow: hidden;
+    width: 200px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+}
+
+.our-packages h1{
+    color: #fff;
+    margin-top: 2em;
+    font-size: 30px;
+
+    /* margin-top: 50px; */
+}
+
+.priceCard1 .Pack-Name{
+    width: 200px;
+    height: 80px;
+    background-color:rgb(3, 8, 22);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.priceCard1 .Pack-Name h2{
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    font-size: 20px;
+}
+.priceCard1 .Pack-desc{
+    text-align: center;
+    margin: 10px;
+}
+
+.priceCard1 .Price{
+    text-align: center;
+    /* margin-top: 30%; */
+}
+.priceCard1 .Book-now{
+    display: flex;
+    justify-content: center;
+    /* padding-top: 10px; */
+    margin-top: 2em;
+}
+.priceCard1 .Book-now button a{
+    text-decoration: none;
+    color: #fff;
+    
+}
+.priceCard1 .Book-now button{
+    width: 100px;
+    height: 30px;
+    background-color:rgb(3, 8, 22);
+    border-radius: 50px;
+    border: none;
+    
+}
+
+
+
+/* contact---------------------> */
+
+.contact{
+    background-color: teal;
+    width: 100%;
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact > *{
+    flex-basis: 100%;
+}
+
+.contact .contact-left-cont{
+    height: 100%;
+    background-color: tomato;
+    padding:  4em;
+}
+.contact .contact-right-cont{
+    height: 100%;
+    padding: 4em;
+}
+
+.contact .contact-right-cont .contact-main{
+    width: 100%;
+    height: 320px;
+    background-color: #fff;
+    border-radius: 10px;
+}       
+
+.social-media i{
+    /* display: flex; */
+    margin: 10px;
+    
+}
+
+.cont-benefits{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(86, 219, 175);
+    color: rgb(0, 0, 0);
+}
+
+.benefits-cont1{
+    /* display: flex; */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 18px; */
+}
+
+.benefits-title{
+    color: yellow;
+}
+
+
+.card-container1 > *{
+    flex-basis: 100%;
+
+}
+.card-container1{
+    display: flex;
+    margin: 18px;
+    column-gap: 18px;
+}
+
+.card-container2 > *{
+    flex-basis: 100%;
+}
+
+.card-container2{
+    display: flex;
+}
+
+.card-container2{
+    margin: 18px;
+    column-gap: 18px
+}
+
+.card-cont{
+    margin-top: 55px;
+}
+.benfits-link{
+    width: 100%;
+    height: 50px;
+}
+.card-body{
+    border: 8px;
+}
+.Benefits{
+    padding: 2em 0;
+}
+/* Testimonials */
+/* --------------------------------------------------------------------------------------------> */
+.reviews-section{
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2em;
+
+}
+.What-clients-Say{
+    text-align: center;
+    /* margin-top: 100px; */
+}
+
+
+/* .main-footer{
+    padding: 20px;
+} */
+
+.card{
+ 
+    text-align: center;
+}
+
+.card img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 15px;
+
+}
+
+
+@media screen and (max-width:720px){
+    .contact{
+        flex-direction: column;
+    }
+    .About-cont{
+        flex-direction: column;
+    }
+    .pricing-cards-cont{
+        flex-direction: column;
+    }
+    .contact .contact-right-cont{
+        height: 100%;
+        padding: 2em;
+    }
+    .contact .contact-left-cont{
+        margin-top: 3em;
+    }
+}
